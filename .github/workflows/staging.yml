@@ -39,5 +39,6 @@ jobs:
       - name: Run unit tests check
         run: |
           python -m pytest
+        working-directory: POC_AssetBundles
       - run: databricks bundle validate --target dev
         working-directory: POC_AssetBundles
