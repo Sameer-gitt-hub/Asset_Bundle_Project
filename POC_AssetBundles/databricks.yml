@@ -1,6 +1,5 @@
 # This is a Databricks asset bundle definition for POC_AssetBundles.
 # See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
-#HELLO
 bundle:
   name: POC_AssetBundles
   uuid: 9eae3096-be73-438e-a43b-297b777b8c2f

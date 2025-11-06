@@ -1,8 +1,7 @@
-from databricks.sdk.runtime import spark
-from pyspark.sql import DataFrame
-from src.POC_AssetBundles import taxis
+
+from src.POC_AssetBundles import functions
 
 
-def test_find_all_taxis():
-    results = taxis.find_all_taxis()
-    assert results.count() > 5
+def test_additions():
+    results = functions.add(1,1)
+    assert results.count() == 5
