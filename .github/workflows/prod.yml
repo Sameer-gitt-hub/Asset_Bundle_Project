@@ -28,6 +28,6 @@ jobs:
 
       # Deploy the bundle to the "dev" target as defined
       # in the bundle's settings file.
-
+      - run: pip install uv
       - run: databricks bundle deploy --target prod
         working-directory: POC_AssetBundles
