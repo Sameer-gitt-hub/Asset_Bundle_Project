@@ -1,0 +1,33 @@
+name: 'Prod Deployment'
+#    
+# Trigger this workflow whenever a pull request is opened against the repo's
+# main branch or an existing pull request's head branch is updated.
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # Used by the "pipeline_update" job to deploy the bundle.
+  # Bundle validation is automatically performed as part of this deployment.
+  # If validation fails, this workflow fails.
+  deploy:
+    name: 'Deploy bundle'
+    runs-on: ubuntu-latest
+    env:
+          DATABRICKS_HOST: https://dbc-a77ae13c-76f2.cloud.databricks.com/
+          DATABRICKS_CLIENT_ID: 99175629-344b-4441-9135-ac35a5802336
+          DATABRICKS_CLIENT_SECRET: doseb60d786ef73c33d9dfac0eae7261ced2
+    steps:
+      # Check out this repo, so that this workflow can access it.
+      - uses: actions/checkout@v3
+
+      # Download the Databricks CLI.
+      # See https://github.com/databricks/setup-cli
+      - uses: databricks/setup-cli@main
+
+      # Deploy the bundle to the "dev" target as defined
+      # in the bundle's settings file.
+
+      - run: databricks bundle deploy --target prod
+        working-directory: Project
