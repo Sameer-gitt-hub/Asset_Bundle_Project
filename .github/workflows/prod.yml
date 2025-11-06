@@ -30,4 +30,4 @@ jobs:
       # in the bundle's settings file.
 
       - run: databricks bundle deploy --target prod
-        working-directory: Project
+        working-directory: POC_AssetBundles
