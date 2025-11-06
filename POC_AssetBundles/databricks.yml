@@ -43,5 +43,5 @@ targets:
       catalog: default
       schema: prod
     permissions:
-      - user_name: deshpandesameer52@gmail.com
-        level: CAN_MANAGE
+    - service_principal_name: 99175629-344b-4441-9135-ac35a5802336
+      level: CAN_MANAGE
