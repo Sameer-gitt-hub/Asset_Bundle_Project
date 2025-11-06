@@ -20,6 +20,10 @@ variables:
   schema:
     description: The schema to use
 
+permissions:
+    - service_principal_name: 99175629-344b-4441-9135-ac35a5802336
+      level: CAN_MANAGE
+
 targets:
   dev:
     # The default target uses 'mode: development' to create a development copy.
@@ -42,6 +46,4 @@ targets:
     variables:
       catalog: default
       schema: prod
-    permissions:
-    - service_principal_name: 99175629-344b-4441-9135-ac35a5802336
-      level: CAN_MANAGE
+    
