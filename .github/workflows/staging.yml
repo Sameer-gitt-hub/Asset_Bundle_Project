@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
           DATABRICKS_HOST: https://dbc-067c5b48-781a.cloud.databricks.com/
-          DATABRICKS_TOKEN: dapi90bdf4d7e0bf12880897da349963cc73
+          DATABRICKS_TOKEN: dapiae3029e0f8687c8a7e19d410a926c484
     steps:
       # Check out this repo, so that this workflow can access it.
       - uses: actions/checkout@v3
